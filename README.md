@@ -54,10 +54,4 @@ This public repository:
 
 ---
 
-## 🤝 Connect
 
-- GitHub: [your-username]
-- LinkedIn: [your-link]
-- Portfolio (Coming Soon)
-
-> Let’s build something amazing. Stay tuned!
