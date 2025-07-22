@@ -76,10 +76,13 @@ body{
 }
 
 .grass{
-  height: 300px;
+  position: absolute;
+  height: 500px;
   width:100%;
   background-color: green;
   margin: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .line{
