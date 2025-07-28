@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let putNum=prompt("Put a number between 0-9");
+        let randomNumber=Math.random()*9;
+
+        if (Number(putNum) === Math.floor(randomNumber)) {
+            console.log(`The number you have chosen is equal to the number I was thinking about which is: ${Math.floor(randomNumber)}`);
+        } else if (Number(putNum) > Math.floor(randomNumber)) {
+            console.log(`Your number is greater than the number I was thinking about (${Math.floor(randomNumber)})`);
+        } else {
+            console.log(`Your number is less than the number I was thinking about (${Math.floor(randomNumber)})`);
+        }
+    </script>
+</body>
+</html>
