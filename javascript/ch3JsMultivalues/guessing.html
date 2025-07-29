@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+  let maxValue = 5;
+let randomNumber = Math.floor(Math.random() * maxValue + 1);  // gives 1 to 5
+let isEqual = false;
+let i = 0;
+
+while (!isEqual && i < maxValue) {
+    let userInput = prompt("Enter a number between 1 and " + maxValue);
+    userInput = Number(userInput);
+
+    if (userInput === randomNumber) {
+        console.log("🎉 That is the correct number!");
+        isEqual = true;
+    } else if (userInput > randomNumber) {
+        console.log("📈 Too high");
+    } else if (userInput < randomNumber) {
+        console.log("📉 Too low");
+    } else {
+        console.log("⚠️ Invalid input. Please enter a number.");
+    }
+
+    i++;
+
+    if (i === maxValue && !isEqual) {
+        console.log("❌ Ran out of tries. The correct number was: " + randomNumber);
+    }
+}
+
+</script>
+</body>
+</html>
