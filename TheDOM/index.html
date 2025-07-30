@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="output">Hello Js</h1>
+    <div class="output">Test</div>
+
+    <script>
+        const ele1 =document.querySelector("h1");
+        ele1.textContent="Jocker";
+        ele1.classList.add('red');
+        ele1.id="tester";
+
+        ele1.style.backgroundColor='red';
+
+         const pageUrl = document.URL;
+        console.log(pageUrl);
+        document.querySelector("div.output").textContent = pageUrl;
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter Project</title>
+</head>
+<body>
+    <div class="output">
+        <h1>Hello</h1>
+        <div>Test</div>
+        <ul>
+            <li id="one">One</li>;
+            <li id="red">Two</li>
+        </ul>
+        <div>Test</div>
+    </div>
+
+    <script>
+         // 1. Select the element with the class "output"
+    const output = document.querySelector('.output');
+
+    // 2. Select only the <ul> tag within the output element and give it ID 'mainList'
+    const mainList = output.querySelector('ul');
+    mainList.id = 'mainList';
+
+    // 3. Search for the tagName of each div and output them as an array
+    const divs = document.querySelectorAll('div');
+    const tagNames = Array.from(divs).map(div => div.tagName);
+    console.log(tagNames);
+
+    // 4. Set IDs and alternate color for divs inside output
+    const innerDivs = output.querySelectorAll('div');
+    for (let i = 0; i < innerDivs.length; i++) {
+        innerDivs[i].id = `id-${i}`;
+        innerDivs[i].style.color = i % 2 === 0 ? 'red' : 'blue';
+    }
+
+    </script>
+
+</body>
+</html>
