@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Friend List</title>
+</head>
+<body>
+   <div id="message"></div>
+   <div id="output"></div>
+
+   <Script>
+    const names =["Naruto", "Hinata", "Sasuke", "Kakashi" , "Jiraya"];
+
+    const output = document.getElementById("output");
+    const message = document.getElementById("message");
+
+    function build(){
+        let html = "<table border='1'>";
+        names.forEach((name, index) => {
+                html += `<tr class="box"
+                              data-row="${index}"
+                              data-name="${name}"
+                              onclick="getData(this)">
+                            <td>${index}</td>
+                            <td>${name}</td>
+                         </tr>`;
+            });
+
+            html += "</table>";
+            output.innerHTML = html;
+        }
+                // Step 4: Get data from clicked row
+        function getData(element) {
+            const row = element.getAttribute("data-row");
+            const name = element.getAttribute("data-name");
+            message.innerHTML = `You clicked on: <b>${name}</b> (Index: ${row})`;
+        }
+
+        // Step 5: Call the build function
+        build();
+
+
+
+   </Script>
+
+</body>
+</html>
