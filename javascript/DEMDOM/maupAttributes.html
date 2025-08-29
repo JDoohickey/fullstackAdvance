@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manupulationg attributes</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div id="shape" class="square"></div>
+   <button onclick="ChangeAttr()">Change attributes....</button>
+
+
+    <script>
+        function ChangeAttr(){
+            let el=document.getElementById("shape");
+            el.setAttribute("style", "background-color:red;border: 1px black solid;");
+            el.setAttribute("id","new");
+            el.setAttribute("class","circle");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button onclick="clicked()">Click</button> <br> <br>
+    <button id="one">Button1</button>
+    <script>
+        function clicked(){
+            alert('What do you want?')
+        }
+        document.getElementById('one').onclick=function(){
+            alert('who dat?')
+        }
+    </script>
+</body>
+</html>
